@@ -6,6 +6,17 @@ import LoginForm from '@/components/LoginForm.vue'
 <template>
   <main>
     <TheWelcome />
-    <LoginForm />
+    <div class="home">
+      <LoginForm />
+    </div>
   </main>
 </template>
+
+<style>
+  .home {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

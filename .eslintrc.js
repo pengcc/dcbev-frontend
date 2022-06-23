@@ -1,10 +1,10 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
 const DOMGlobals = ['window', 'document']
 const NodeGlobals = ['module', 'require']
-/* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
-  "root": true,
+  root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module'
@@ -29,13 +29,13 @@ module.exports = {
       'AwaitExpression'
     ]
   },
-  "extends": [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/eslint-config-typescript/recommended",
-    "@vue/eslint-config-prettier"
+  extends: [
+    'plugin:vue/vue3-essential',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript/recommended',
+    '@vue/eslint-config-prettier'
   ],
-  "env": {
-    "vue/setup-compiler-macros": true
+  env: {
+    'vue/setup-compiler-macros': true
   }
 }

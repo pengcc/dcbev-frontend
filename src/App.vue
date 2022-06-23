@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import TheHeader from './components/TheHeader.vue'
 </script>
 
@@ -11,7 +11,8 @@ import TheHeader from './components/TheHeader.vue'
 <style>
 @import '@/assets/base.css';
 
-#app {
+.app-wrapper {
+  width: 80vw;
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
@@ -38,7 +39,7 @@ a,
 }
 
 @media (hover: hover) {
-  a:hover {
+ :is(.app-wrapper) a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
@@ -50,21 +51,22 @@ nav {
   margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+:is(.app-wrapper) nav a.router-link-exact-active {
+  color: hsla(160, 100%, 37%, 1);
 }
 
-nav a.router-link-exact-active:hover {
+:is(.app-wrapper) nav a.router-link-exact-active:hover {
   background-color: transparent;
 }
 
-nav a {
+:is(.app-wrapper) nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 
-nav a:first-of-type {
+:is(.app-wrapper) nav a:first-of-type {
   border: 0;
 }
 
@@ -78,7 +80,6 @@ nav a:first-of-type {
     width: 100%;
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   header .wrapper {
